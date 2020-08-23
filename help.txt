@@ -1,0 +1,52 @@
+Dataset represent verified Facebook page networks of different categories. Nodes represent the pages and edges are mutual likes among them. The pickle files contain the edges - nodes are indexed from 0.
+Dataset: pickles of facebook processed data.
+
+
+The goal of link prediction is to recommend missing edges in a social network graph. Social Networks mainly focus on building social relations among users who share common interests, background, real-life connections,etc. People may or may not want to maximize their social influence. For example, a business page owners on instagram want to influence as many people as possible for their commercial advantages.However, the network is evolving in time, new users are joining, adding friends, new connections between old users,etc.Based on the current network we want to be able to predict the upcoming changes in the network and make recommendations accordingly.
+
+
+
+AUC(Area under the curve)& ROC(Reciever operating characteristics):
+-------------------------------------------------------------------
+AUC - ROC curve is a performance measurement for classification problem at various thresholds settings. ROC is a probability curve and AUC represents degree or measure of separability.
+Used to describe model best performance.
+
+NetworkX:
+--------
+provides data structures for graphs (or networks) along with graph algorithms
+
+node2vec.ipynb: Takes time for execution if c++ compiler tools are not available in sytem
+---------
+positive negative edges:
+------------------------
+express positive and negative attitudes (e.g. support/opposition) towards other users
+
+
+node2vec:
+---------
+node2vec is an algorithmic framework for representational learning on graphs.
+
+embeddings:
+--------------
+used to create embedding of the nodes in a graph.
+
+
+-->Evaluated embeddings using logistic regression, found out ROC and Average precision score.
+
+
+
+
+Graph-auto-encoders.ipynb:
+--------------------
+VAE: Variational auto encoder
+Load the graph data from pickle
+pre process the data using scipy and tensorflow
+converting feature normal matrix into sparse matrix for optimization,creating VAE model using auto encoders.
+training and evaluating the VAE model. Finding the ROC and Average precision.
+
+
+link-prediction-baselines:
+---------------------------
+Adamic/adar:
+------------
+used to predict links in a social network.
